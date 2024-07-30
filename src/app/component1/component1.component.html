@@ -1,0 +1,39 @@
+<div id="search">
+    <h3>Search</h3>
+    <form>
+        <div class="row">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="row">
+            <label for="year">Year:</label><br>
+            <input type="text" id="year" name="year">
+        </div>
+        <div class="row">
+            <label for="plot">Plot:</label><br>
+            <select name="plot" id="plot">
+                <option value="full">Full</option>
+                <option value="short">Short</option>
+            </select>
+        </div>
+        <br>
+        <input type="submit" value="Search" id="searchbtn">
+        <div class = "row">
+            <button value="clean" id = "clean">Clean results</button>
+        </div>
+    </form>
+</div>
+
+
+<div id = "movie-info">
+    <ul *ngIf="movie">
+        <p>Name: {{movie.Title}}</p>
+        <p>Year: {{movie.Year}}</p>
+        <p>Rated: {{movie.Rated}}</p>
+        <p>Runtime: {{movie.Runtime}}</p>
+        <p>Director: {{movie.Director}}</p>
+        <p>Actors: {{movie.Actors}}</p>
+        <p>Plot: {{movie.Plot}}</p>
+        <p>imdbRating: {{movie.imdbRating}}</p>
+    </ul>
+</div>
